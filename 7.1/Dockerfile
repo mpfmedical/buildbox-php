@@ -13,5 +13,7 @@ RUN apt-get -qq update; \
     php /tmp/composer-setup.php --install-dir=/bin --filename=composer; \
     mkdir -p /root/.ssh; \
     chmod 0700 /root/.ssh; \
+    touch /root/.ssh/known_hosts; \
+    chmod 0600 /root/.ssh/known_hosts; \
     rm -rf /var/lib/apt/lists/*; \
     rm -rf /tmp/*
