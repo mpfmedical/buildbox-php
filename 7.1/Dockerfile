@@ -11,5 +11,7 @@ RUN apt-get -qq update; \
     docker-php-ext-install gd mcrypt bcmath mbstring pdo_mysql; \
     php -r "copy('https://getcomposer.org/installer', '/tmp/composer-setup.php');"; \
     php /tmp/composer-setup.php --install-dir=/bin --filename=composer; \
+    mkdir -p /root/.ssh; \
+    chmod 0700 /root/.ssh; \
     rm -rf /var/lib/apt/lists/*; \
     rm -rf /tmp/*
