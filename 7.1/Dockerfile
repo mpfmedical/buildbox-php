@@ -1,6 +1,8 @@
 FROM php:7.1
 
 ENV PHANTOMJS_VERSION=2.1.1
+    COMPOSER_ALLOW_SUPERUSER=1
+    COMPOSER_NO_INTERACTION=1
 
 RUN apt-get -qq update; \
     apt-get -qqy install libfreetype6-dev libjpeg62-turbo-dev libpng12-dev libmcrypt-dev zlib1g-dev curl unzip bzip2 fontconfig ssh rsync; \
