@@ -1,6 +1,6 @@
 FROM alpine:edge
 
-ENV COMPOSER_ALLOW_SUPERUSER=1
+ENV COMPOSER_ALLOW_SUPERUSER=1 \
     COMPOSER_NO_INTERACTION=1
 
 RUN apk --no-cache --no-progress add php7 php7-openssl php7-session php7-pdo_mysql php7-mbstring php7-json php7-xml php7-curl php7-zip php7-zlib php7-bcmath php7-mcrypt curl nodejs php7-phar php7-dom php7-ctype php7-xdebug; \
